@@ -42,8 +42,8 @@ post '/date_range_search' do
 			date = Chronic.parse release_date
 			releases += 1 if start_date <= date and end_date >= date
 		end
+		releases.to_s
 	end
-	releases.to_s
 end
 
 private
