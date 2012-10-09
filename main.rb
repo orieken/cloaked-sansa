@@ -2,7 +2,6 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'csv'
-require 'pry'
 require 'chronic'
 
 class Main < Sinatra::Application
@@ -27,13 +26,24 @@ post '/start_date_search' do
 	start_date = Chronic.parse params[:date]
 	load_dates.reverse_each do |release_date|
 		date = Chronic.parse release_date
-		releases += 1 if start_date < date
+		releases += 1 if start_date <= date
 	end
 	releases.to_s
 end
 
 post '/date_range_search' do
-
+	releases = 0
+	start_date = Chronic.parse params[:start_date]
+	end_date = Chronic.parse params[:end_date]
+	if start_date > end_date
+		'backwards'
+	else
+		load_dates.each do |release_date|
+			date = Chronic.parse release_date
+			releases += 1 if start_date <= date and end_date >= date
+		end
+	end
+	releases.to_s
 end
 
 private

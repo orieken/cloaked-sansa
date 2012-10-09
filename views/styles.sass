@@ -37,7 +37,7 @@ a:hover
 #body
   :margin 0 auto
   :width 1000px
-  :height 320px
+  :height 440px
 
 .big_button
   :width 410px
@@ -56,20 +56,21 @@ a:hover
 .starting_area .big_button .left
   :margin-right 40px
 
-.start_date_search
+.start_date_search, .date_range_search
   :margin-top 40px
   :display none
 
-.start_date_search span
+.start_date_search span, .date_range_search span
   :display inline-block
   :margin-right 20px
   :font-size 30px
 
-.start_date_search input[type='text']
+.date_range_search .date_entry
+  :width 220px
+  :text-align right
+
+.start_date_search input[type='text'], .date_range_search input[type='text']
   :font-size 20px
   :width 380px
   :padding 20px
   :color #808080
-
-.Zebra_DatePicker_Icon Zebra_DatePicker_Icon_Inside
-  :top -40px
