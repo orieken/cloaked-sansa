@@ -27,7 +27,7 @@ showStartDateSearch = function () {
         onSelect:function (view, elements) {
             $.blockUI();
             $.post("/start_date_search", {"date":view}, function (data) {
-                $("#start_date_search_results").html("You Have Been Around For " + data + " Releases!")
+                $("#start_date_search_results").html("You Have Been Around For " + data + " Releases!");
                 $.unblockUI();
             });
         }
