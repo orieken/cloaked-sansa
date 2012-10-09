@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', content: 'text/html'}
+    %title Manheim Digital's 100th Release!
+    %link{rel: 'stylesheet', href: '/styles.css'}
+    %link{rel: 'stylesheet', href: '/zebra_datepicker.css'}
+    %link{rel: 'stylesheet', href: '/zebra_datepicker_metallic.css'}
+    %script{type: 'text/javascript', charset: 'utf-8', src: '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'}
+    %script{type: 'text/javascript', charset: 'utf-8', src: '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js'}
+    %script{type: 'text/javascript', charset: 'utf-8', src: '/scripts.js'}
+    %script{type: 'text/javascript', charset: 'utf-8', src: '/zebra_datepicker.js'}
+  %body
+    .header.shadow
+      .left
+        github:
+        %a{href: 'http://github.com/wpoindexter/cloaked-sansa', target: '_blank'} cloaked-sansa
+      .right
+        Manheim Digital's 100th Release!
+    #body
+      = yield
+    %img{src: '/logo.jpeg'}

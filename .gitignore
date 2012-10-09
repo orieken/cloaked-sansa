@@ -1,0 +1,6 @@
+.idea/
+.rvmrc
+*.log
+.sass-cache/
+.bundle
+.gems
